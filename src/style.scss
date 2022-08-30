@@ -7,7 +7,7 @@
         $bgColor - pentru a seta culoarea
     
     La :hover, culorile se inversează
-
+    
     Toate butoanele vor putea primi clasele .sm și .lg, care doar schimbă mărimea fontului la 0.875rem, respectiv 1.25rem.
     Aceste clase nu ar trebui să aibă efect dacă sunt folosite pe altceva decât butoane.
 
@@ -23,17 +23,41 @@
     https://sass-lang.com/documentation/style-rules/parent-selector
 */
 
-a {
-    // Adaugă mixin aici
-    // @include button(white, blue);
+@mixin button($textColor, $bgColor) {
+    background-color: $bgColor;
+    color: $textColor;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $textColor;
+        color: $bgColor;
+    }
+
+    &.sm {
+        font-size: 0.875rem;
+    }
+
+    &.lg {
+        font-size: 1.25rem;
+    }
 }
 
-.btn {
+a {
     // Adaugă mixin aici
-    // @include button(white, black);
+    @include button(white, blue);
+}
+
+span {
+    // Adaugă mixin aici
+    @include button(white, black);
 }
 
 button {
     // Adaugă mixin aici
-    // @include button(black, aqua);
+    @include button(black, aqua);
 }
