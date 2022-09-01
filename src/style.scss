@@ -23,17 +23,63 @@
     https://sass-lang.com/documentation/style-rules/parent-selector
 */
 
-a {
-    // Adaugă mixin aici
-    // @include button(white, blue);
+@mixin text-and-bcg-color($color, $bcg-color) {
+  color: $color;
+  background-color: $bcg-color;
 }
-
+a {
+  @include text-and-bcg-color(#fff, #00f);
+  &:hover {
+    @include text-and-bcg-color(#00f, #fff);
+  }
+  &:focus {
+    @include text-and-bcg-color(#00f, #fff);
+  }
+  &:active {
+    @include text-and-bcg-color(#00f, #fff);
+  }
+}
 .btn {
-    // Adaugă mixin aici
-    // @include button(white, black);
+  @include text-and-bcg-color(#fff, #000);
+
+  &:hover {
+    @include text-and-bcg-color(#000, #fff);
+  }
+  &:focus {
+    @include text-and-bcg-color(#000, #fff);
+  }
+  &:active {
+    @include text-and-bcg-color(#000, #fff);
+  }
 }
 
 button {
-    // Adaugă mixin aici
-    // @include button(black, aqua);
+  @include text-and-bcg-color(#fff, red);
+  cursor: pointer;
+  border: 0;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  &:hover {
+    @include text-and-bcg-color(red, #fff);
+  }
+  &:focus {
+    @include text-and-bcg-color(red, #fff);
+  }
+  &:active {
+    @include text-and-bcg-color(red, #fff);
+  }
+}
+a,
+.btn,
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  &.sm {
+    font-size: 0.875rem;
+  }
+  &.lg {
+    font-size: 1.25rem;
+  }
 }
