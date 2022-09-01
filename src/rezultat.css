@@ -1,65 +1,71 @@
-  a {
-    color: #fff;
-    cursor: pointer;
-    background-color: #00f;
-    border: 0;
-    padding: .5em 1em;
-    text-decoration: none;
-  }
-  
-  a:hover, a:focus, a:active {
-    color: #00f;
-    background-color: #fff;
-  }
-  
-  a.sm {
-    font-size: .875rem;
-  }
-  
-  a.lg {
-    font-size: 1.25rem;
-  }
-  
-  span {
-    color: #fff;
-    cursor: pointer;
-    background-color: #000;
-    border: 0;
-    padding: .5em 1em;
-    text-decoration: none;
-  }
-  
-  span:hover, span:focus, span:active {
-    color: #000;
-    background-color: #fff;
-  }
-  
-  span.sm {
-    font-size: .875rem;
-  }
-  
-  span.lg {
-    font-size: 1.25rem;
-  }
-  
-  button {
-    color: #fff;
-    cursor: pointer;
-    background-color: red;
-    border: 0;
-    padding: .5em 1em;
-    text-decoration: none;
-  }
-  
-  button:hover, button:focus, button:active {
-    color: red;
-    background-color: #fff;
-  }
-  
-  button.sm {
-    font-size: .875rem;
-  }
-  
-  button.lg {
-    font-size: 1.25rem;
-  }
+a {
+  color: #fff;
+  cursor: pointer;
+  background-color: #00f;
+  border: 0;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #00f;
+  background-color: #fff;
+}
+
+a.sm {
+  font-size: 0.875rem;
+}
+
+a.lg {
+  font-size: 1.25rem;
+}
+
+span {
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border: 0;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
+span:hover,
+span:focus,
+span:active {
+  color: #000;
+  background-color: #fff;
+}
+
+span.sm {
+  font-size: 0.875rem;
+}
+
+span.lg {
+  font-size: 1.25rem;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: red;
+  border: 0;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: red;
+  background-color: #fff;
+}
+
+button.sm {
+  font-size: 0.875rem;
+}
+
+button.lg {
+  font-size: 1.25rem;
+}
