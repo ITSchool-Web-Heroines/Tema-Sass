@@ -29,42 +29,24 @@
 }
 a {
   @include text-and-bcg-color(#fff, #00f);
-  &:hover {
-    @include text-and-bcg-color(#00f, #fff);
-  }
-  &:focus {
-    @include text-and-bcg-color(#00f, #fff);
-  }
+  &:hover,
+  &:focus,
   &:active {
     @include text-and-bcg-color(#00f, #fff);
   }
 }
 .btn {
   @include text-and-bcg-color(#fff, #000);
-
-  &:hover {
-    @include text-and-bcg-color(#000, #fff);
-  }
-  &:focus {
-    @include text-and-bcg-color(#000, #fff);
-  }
+  &:hover,
+  &:focus,
   &:active {
     @include text-and-bcg-color(#000, #fff);
   }
 }
-
 button {
   @include text-and-bcg-color(#fff, red);
-  cursor: pointer;
-  border: 0;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  &:hover {
-    @include text-and-bcg-color(red, #fff);
-  }
-  &:focus {
-    @include text-and-bcg-color(red, #fff);
-  }
+  &:hover,
+  &:focus,
   &:active {
     @include text-and-bcg-color(red, #fff);
   }
