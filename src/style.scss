@@ -1,39 +1,57 @@
 @use "reset";
 
-/*
-    Crează un mixin pentru butoane.
-    Mixinul va primi 2 parametri:
-        $textColor - pentru a seta culoarea textului
-        $bgColor - pentru a seta culoarea
-    
-    La :hover, culorile se inversează
-
-    Toate butoanele vor putea primi clasele .sm și .lg, care doar schimbă mărimea fontului la 0.875rem, respectiv 1.25rem.
-    Aceste clase nu ar trebui să aibă efect dacă sunt folosite pe altceva decât butoane.
-
-    în final, codul CSS generat ar trebui să fie asemănător cu ceea ce vezi în fișierul `rezultat.css`
-
-    Limitări:
-    - Nu ai voie să folosești variabile de CSS.
-    - Nu ai voie să creezi clase noi
-
-    Materiale de studiu:
-    https://sass-lang.com/documentation/at-rules/mixin
-    https://sass-lang.com/documentation/variables
-    https://sass-lang.com/documentation/style-rules/parent-selector
-*/
-
+@mixin buttonsSet($textColor: #fff, $bgColor: #00f) {
+  color: $textColor;
+  background-color: $bgColor;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border: 0;
+}
 a {
-    // Adaugă mixin aici
-    // @include button(white, blue);
+  @include buttonsSet(#fff, #00f);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include buttonsSet(#00f, #fff);
+  }
+  &.sm {
+    font-size: 0.875rem;
+  }
+  &.lg {
+    font-size: 1.25rem;
+  }
 }
 
 .btn {
-    // Adaugă mixin aici
-    // @include button(white, black);
+  @include buttonsSet(#fff, #000);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include buttonsSet(#000, #fff);
+  }
+  &.sm {
+    font-size: 0.875rem;
+  }
+  &.lg {
+    font-size: 1.25rem;
+  }
 }
 
 button {
-    // Adaugă mixin aici
-    // @include button(black, aqua);
+  @include buttonsSet(#000, aqua);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include buttonsSet(aqua, #000);
+  }
+  &.sm {
+    font-size: 0.875rem;
+  }
+  &.lg {
+    font-size: 1.25rem;
+  }
 }
