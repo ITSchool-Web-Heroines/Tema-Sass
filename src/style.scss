@@ -26,8 +26,12 @@
 @mixin button($textColor:white, $bgColor:blue) {
     color: $textColor;
     background: $bgColor;
+    cursor: pointer;
+    border: 0;
+    padding: 0.5em 1em;
+    text-decoration: none;
 
-    &:hover {
+    &:hover, &:focus, &:active {
         color: $bgColor;
         background: $textColor;
     }
