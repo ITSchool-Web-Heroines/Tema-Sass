@@ -22,46 +22,34 @@
     https://sass-lang.com/documentation/variables
     https://sass-lang.com/documentation/style-rules/parent-selector
 */
-
-@mixin text-and-bcg-color($color, $bcg-color) {
+@mixin button($color, $bcg-color) {
   color: $color;
   background-color: $bcg-color;
-}
-a {
-  @include text-and-bcg-color(#fff, #00f);
-  &:hover,
-  &:focus,
-  &:active {
-    @include text-and-bcg-color(#00f, #fff);
-  }
-}
-.btn {
-  @include text-and-bcg-color(#fff, #000);
-  &:hover,
-  &:focus,
-  &:active {
-    @include text-and-bcg-color(#000, #fff);
-  }
-}
-button {
-  @include text-and-bcg-color(#fff, red);
-  &:hover,
-  &:focus,
-  &:active {
-    @include text-and-bcg-color(red, #fff);
-  }
-}
-a,
-.btn,
-button {
-  cursor: pointer;
-  border: 0;
   padding: 0.5em 1em;
+  cursor: pointer;
   text-decoration: none;
+  border: 0.1rem solid black;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $bcg-color;
+    background-color: $color;
+  }
   &.sm {
     font-size: 0.875rem;
   }
   &.lg {
     font-size: 1.25rem;
   }
+}
+a {
+  @include button(white, blue);
+}
+
+.btn {
+  @include button(white, black);
+}
+
+button {
+  @include button(black, aqua);
 }
