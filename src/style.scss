@@ -22,18 +22,34 @@
     https://sass-lang.com/documentation/variables
     https://sass-lang.com/documentation/style-rules/parent-selector
 */
-
+@mixin button($color, $bcg-color) {
+  color: $color;
+  background-color: $bcg-color;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0.1rem solid black;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $bcg-color;
+    background-color: $color;
+  }
+  &.sm {
+    font-size: 0.875rem;
+  }
+  &.lg {
+    font-size: 1.25rem;
+  }
+}
 a {
-    // Adaugă mixin aici
-    // @include button(white, blue);
+  @include button(white, blue);
 }
 
 .btn {
-    // Adaugă mixin aici
-    // @include button(white, black);
+  @include button(white, black);
 }
 
 button {
-    // Adaugă mixin aici
-    // @include button(black, aqua);
+  @include button(black, aqua);
 }
